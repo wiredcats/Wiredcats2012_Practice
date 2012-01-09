@@ -1,0 +1,10 @@
+arm - 29
+
+jul - 28
+jdl - 25
+jur - 21
+jdr - 24
+
+grip - 20
+
+lift - 26, 27, 22

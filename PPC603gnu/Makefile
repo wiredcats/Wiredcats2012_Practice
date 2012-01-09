@@ -31,7 +31,7 @@ else
 MODE_DIR := NonDebug
 endif
 OBJ_DIR := .
-PRJ_ROOT_DIR := C:/windriver/workspace/Wiredcats2012
+PRJ_ROOT_DIR := C:/windriver/workspace/Wiredcats2012_Practice
 WS_ROOT_DIR := C:/windriver/workspace
 
 
@@ -158,11 +158,66 @@ SimpleTemplate_partialImage/$(MODE_DIR)/% : LIBPATH =
 SimpleTemplate_partialImage/$(MODE_DIR)/% : LIBS = 
 SimpleTemplate_partialImage/$(MODE_DIR)/% : OBJ_DIR := SimpleTemplate_partialImage/$(MODE_DIR)
 
-SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012/MyRobot.o : C:/windriver/workspace/Wiredcats2012/MyRobot.cpp
+SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Controllers/AutonomousController2415.o : C:/windriver/workspace/Wiredcats2012_Practice/Controllers/AutonomousController2415.cpp
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
-OBJECTS_SimpleTemplate_partialImage = SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012/MyRobot.o
+SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Controllers/ScoreController.o : C:/windriver/workspace/Wiredcats2012_Practice/Controllers/ScoreController.cpp
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Controllers/TwoTubeAutonomousController2415.o : C:/windriver/workspace/Wiredcats2012_Practice/Controllers/TwoTubeAutonomousController2415.cpp
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Global.o : C:/windriver/workspace/Wiredcats2012_Practice/Global.cpp
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Task2415.o : C:/windriver/workspace/Wiredcats2012_Practice/Task2415.cpp
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Tasks/Arm2415.o : C:/windriver/workspace/Wiredcats2012_Practice/Tasks/Arm2415.cpp
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Tasks/Deployment2415.o : C:/windriver/workspace/Wiredcats2012_Practice/Tasks/Deployment2415.cpp
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Tasks/Drive2415.o : C:/windriver/workspace/Wiredcats2012_Practice/Tasks/Drive2415.cpp
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Tasks/Gripper2415.o : C:/windriver/workspace/Wiredcats2012_Practice/Tasks/Gripper2415.cpp
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Tasks/Lift2415.o : C:/windriver/workspace/Wiredcats2012_Practice/Tasks/Lift2415.cpp
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Tasks/TaskTemplate2415.o : C:/windriver/workspace/Wiredcats2012_Practice/Tasks/TaskTemplate2415.cpp
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Wiredcats2415.o : C:/windriver/workspace/Wiredcats2012_Practice/Wiredcats2415.cpp
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+OBJECTS_SimpleTemplate_partialImage = SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Controllers/AutonomousController2415.o \
+	 SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Controllers/ScoreController.o \
+	 SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Controllers/TwoTubeAutonomousController2415.o \
+	 SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Global.o \
+	 SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Task2415.o \
+	 SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Tasks/Arm2415.o \
+	 SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Tasks/Deployment2415.o \
+	 SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Tasks/Drive2415.o \
+	 SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Tasks/Gripper2415.o \
+	 SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Tasks/Lift2415.o \
+	 SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Tasks/TaskTemplate2415.o \
+	 SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Wiredcats2415.o
 
 SimpleTemplate_partialImage/$(MODE_DIR)/SimpleTemplate_partialImage.o : $(OBJECTS_SimpleTemplate_partialImage)
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc -r -nostdlib -Wl,-X  -o "$@" $(OBJECTS_SimpleTemplate_partialImage) $(LIBPATH) $(LIBS) $(ADDED_LIBPATH) $(ADDED_LIBS)  && if [ "$(EXPAND_DBG)" = "1" ]; then plink "$@";fi
@@ -174,7 +229,10 @@ _clean :: SimpleTemplate_partialImage/$(MODE_DIR)/SimpleTemplate_partialImage_cl
 SimpleTemplate_partialImage/$(MODE_DIR)/SimpleTemplate_partialImage_clean : 
 	$(TRACE_FLAG)if [ -d "SimpleTemplate_partialImage" ]; then cd "SimpleTemplate_partialImage"; rm -rf $(MODE_DIR); fi
 
-DEP_FILES := SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012/MyRobot.d
+DEP_FILES := SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Controllers/AutonomousController2415.d SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Controllers/ScoreController.d SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Controllers/TwoTubeAutonomousController2415.d \
+	 SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Global.d SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Task2415.d SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Tasks/Arm2415.d \
+	 SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Tasks/Deployment2415.d SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Tasks/Drive2415.d SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Tasks/Gripper2415.d \
+	 SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Tasks/Lift2415.d SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Tasks/TaskTemplate2415.d SimpleTemplate_partialImage/$(MODE_DIR)/Objects/Wiredcats2012_Practice/Wiredcats2415.d
 -include $(DEP_FILES)
 
 
