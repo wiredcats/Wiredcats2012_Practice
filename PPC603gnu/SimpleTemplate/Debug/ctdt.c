@@ -7,23 +7,11 @@
 /*       -fdollars-in-identifiers flag.                   */
 
 
-void _GLOBAL__I__ZN11Gripper2415C2Ev();
-
-void _GLOBAL__I__ZN14Deployment2415C2Ev();
+void _GLOBAL__I__ZN15AutoBalance2415C2Ev();
 
 void _GLOBAL__I__ZN16TaskTemplate2415C2Ev();
 
-void _GLOBAL__I__ZN19ScoreController2415C2Ev();
-
-void _GLOBAL__I__ZN24AutonomousController2415C2Ev();
-
-void _GLOBAL__I__ZN31TwoTubeAutonomousController2415C2Ev();
-
 void _GLOBAL__I__ZN6Global6myselfE();
-
-void _GLOBAL__I__ZN7Arm2415C2Ev();
-
-void _GLOBAL__I__ZN8Lift2415C2Ev();
 
 void _GLOBAL__I__ZN8Task24158TaskListE();
 
@@ -44,15 +32,9 @@ void _GLOBAL__I_AxisCamera_debugFlag();
 extern void (*_ctors[])();
 void (*_ctors[])() =
     {
-    _GLOBAL__I__ZN11Gripper2415C2Ev,
-    _GLOBAL__I__ZN14Deployment2415C2Ev,
+    _GLOBAL__I__ZN15AutoBalance2415C2Ev,
     _GLOBAL__I__ZN16TaskTemplate2415C2Ev,
-    _GLOBAL__I__ZN19ScoreController2415C2Ev,
-    _GLOBAL__I__ZN24AutonomousController2415C2Ev,
-    _GLOBAL__I__ZN31TwoTubeAutonomousController2415C2Ev,
     _GLOBAL__I__ZN6Global6myselfE,
-    _GLOBAL__I__ZN7Arm2415C2Ev,
-    _GLOBAL__I__ZN8Lift2415C2Ev,
     _GLOBAL__I__ZN8Task24158TaskListE,
     _GLOBAL__I__ZN8Task2415C2Ev,
     _GLOBAL__I__ZN9Drive2415C2Ev,
@@ -64,23 +46,11 @@ void (*_ctors[])() =
     0
     };
 
-void _GLOBAL__D__ZN11Gripper2415C2Ev();
-
-void _GLOBAL__D__ZN14Deployment2415C2Ev();
+void _GLOBAL__D__ZN15AutoBalance2415C2Ev();
 
 void _GLOBAL__D__ZN16TaskTemplate2415C2Ev();
 
-void _GLOBAL__D__ZN19ScoreController2415C2Ev();
-
-void _GLOBAL__D__ZN24AutonomousController2415C2Ev();
-
-void _GLOBAL__D__ZN31TwoTubeAutonomousController2415C2Ev();
-
 void _GLOBAL__D__ZN6Global6myselfE();
-
-void _GLOBAL__D__ZN7Arm2415C2Ev();
-
-void _GLOBAL__D__ZN8Lift2415C2Ev();
 
 void _GLOBAL__D__ZN8Task24158TaskListE();
 
@@ -99,15 +69,9 @@ void _GLOBAL__D_AxisCamera_debugFlag();
 extern void (*_dtors[])();
 void (*_dtors[])() =
     {
-    _GLOBAL__D__ZN11Gripper2415C2Ev,
-    _GLOBAL__D__ZN14Deployment2415C2Ev,
+    _GLOBAL__D__ZN15AutoBalance2415C2Ev,
     _GLOBAL__D__ZN16TaskTemplate2415C2Ev,
-    _GLOBAL__D__ZN19ScoreController2415C2Ev,
-    _GLOBAL__D__ZN24AutonomousController2415C2Ev,
-    _GLOBAL__D__ZN31TwoTubeAutonomousController2415C2Ev,
     _GLOBAL__D__ZN6Global6myselfE,
-    _GLOBAL__D__ZN7Arm2415C2Ev,
-    _GLOBAL__D__ZN8Lift2415C2Ev,
     _GLOBAL__D__ZN8Task24158TaskListE,
     _GLOBAL__D__ZN8Task2415C2Ev,
     _GLOBAL__D__ZN9Drive2415C2Ev,

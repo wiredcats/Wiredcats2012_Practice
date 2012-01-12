@@ -282,20 +282,11 @@
   C:/windriver/vxworks-6.3/target/h/WPILib/WPILib.h \
   C:/windriver/workspace/Wiredcats2012_Practice/Tasks/../Task2415.h \
   C:/windriver/workspace/Wiredcats2012_Practice/Tasks/../Global.h \
-  C:/windriver/workspace/Wiredcats2012_Practice/Tasks/Lift2415.h \
-  C:/windriver/workspace/Wiredcats2012_Practice/Tasks/Arm2415.h \
-  C:/windriver/workspace/Wiredcats2012_Practice/Tasks/Gripper2415.h \
-  C:/windriver/workspace/Wiredcats2012_Practice/Tasks/Deployment2415.h \
-  C:/windriver/workspace/Wiredcats2012_Practice/Controllers/ScoreController.h \
+  C:/windriver/workspace/Wiredcats2012_Practice/Controllers/AutoBalance.h \
   C:/windriver/vxworks-6.3/target/h/WPILib/WPILib.h \
-  C:/windriver/workspace/Wiredcats2012_Practice/Controllers/../Tasks/Arm2415.h \
-  C:/windriver/workspace/Wiredcats2012_Practice/Controllers/../Tasks/Gripper2415.h \
-  C:/windriver/workspace/Wiredcats2012_Practice/Controllers/../Tasks/Lift2415.h \
-  C:/windriver/workspace/Wiredcats2012_Practice/Controllers/../Task2415.h \
-  C:/windriver/workspace/Wiredcats2012_Practice/Controllers/../Global.h \
-  C:/windriver/workspace/Wiredcats2012_Practice/Controllers/AutonomousController2415.h \
   C:/windriver/workspace/Wiredcats2012_Practice/Controllers/../Tasks/Drive2415.h \
-  C:/windriver/workspace/Wiredcats2012_Practice/Controllers/ScoreController.h
+  C:/windriver/workspace/Wiredcats2012_Practice/Controllers/../Task2415.h \
+  C:/windriver/workspace/Wiredcats2012_Practice/Controllers/../Global.h
 
 C:/windriver/workspace/Wiredcats2012_Practice/Wiredcats2415.h:
 
@@ -859,30 +850,12 @@ C:/windriver/workspace/Wiredcats2012_Practice/Tasks/../Task2415.h:
 
 C:/windriver/workspace/Wiredcats2012_Practice/Tasks/../Global.h:
 
-C:/windriver/workspace/Wiredcats2012_Practice/Tasks/Lift2415.h:
-
-C:/windriver/workspace/Wiredcats2012_Practice/Tasks/Arm2415.h:
-
-C:/windriver/workspace/Wiredcats2012_Practice/Tasks/Gripper2415.h:
-
-C:/windriver/workspace/Wiredcats2012_Practice/Tasks/Deployment2415.h:
-
-C:/windriver/workspace/Wiredcats2012_Practice/Controllers/ScoreController.h:
+C:/windriver/workspace/Wiredcats2012_Practice/Controllers/AutoBalance.h:
 
 C:/windriver/vxworks-6.3/target/h/WPILib/WPILib.h:
 
-C:/windriver/workspace/Wiredcats2012_Practice/Controllers/../Tasks/Arm2415.h:
-
-C:/windriver/workspace/Wiredcats2012_Practice/Controllers/../Tasks/Gripper2415.h:
-
-C:/windriver/workspace/Wiredcats2012_Practice/Controllers/../Tasks/Lift2415.h:
+C:/windriver/workspace/Wiredcats2012_Practice/Controllers/../Tasks/Drive2415.h:
 
 C:/windriver/workspace/Wiredcats2012_Practice/Controllers/../Task2415.h:
 
 C:/windriver/workspace/Wiredcats2012_Practice/Controllers/../Global.h:
-
-C:/windriver/workspace/Wiredcats2012_Practice/Controllers/AutonomousController2415.h:
-
-C:/windriver/workspace/Wiredcats2012_Practice/Controllers/../Tasks/Drive2415.h:
-
-C:/windriver/workspace/Wiredcats2012_Practice/Controllers/ScoreController.h:

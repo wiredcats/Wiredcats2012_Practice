@@ -5,29 +5,20 @@
 #include "../Task2415.h"
 #include "../Global.h"
 
-#define GO_STRAIGHT (10)
-#define TURN_SOFT_RIGHT_TO_LINE (20)
-#define TURN_SOFT_LEFT_TO_LINE (30)
-#define TURN_HARD_RIGHT_TO_LINE (40)
-#define TURN_HARD_LEFT_TO_LINE (50)
-#define STOP_BOT (60)
-#define MOVE_BACK (70)
+#define NORMAL_JOYSTICK (10)
+#define GO_STRAIGHT (20)
+#define MOVE_BACK (30)
+#define STOP_BOT (40)
 
-const float AUTO_STRAIGHT_SPEED = 0.7;
-const float AUTO_TURN_SPEED = 0.5;
+const float STRAIGHT_SPEED = 0.35;
 
 class Drive2415 : public Task2415 {
 private:
 	Global *global;
 
 	CANJaguar *jagLeftU, *jagLeftD, *jagRightU, *jagRightD;
-	Solenoid *solA, *solB;
-
-	Relay *lightsA, *lightsB;
 
 	Joystick *stickL, *stickR;
-
-	Gyro *gyro;
 
 public:
 	Drive2415(void);

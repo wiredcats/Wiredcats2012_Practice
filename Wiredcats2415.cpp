@@ -12,7 +12,6 @@ Global global;
 
 Wiredcats2415::Wiredcats2415(void) {
 	comp = new Compressor(4, 5);
-
 	lightsA = new Relay(6);
 }
 
@@ -23,7 +22,6 @@ void Wiredcats2415::Autonomous(void) {
 
 void Wiredcats2415::OperatorControl(void) {
 	Task2415::SetTaskStatuses(STATUS_TELEOP);
-	
 	comp->Start();
 }
 
