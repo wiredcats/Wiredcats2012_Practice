@@ -30,14 +30,26 @@ int Drive2415::Main(int a2, int a3, int a4, int a5, int a6, int a7, int a8, int 
 				case GO_STRAIGHT:
 					jagLeftU->Set(STRAIGHT_SPEED);
 					jagLeftD->Set(STRAIGHT_SPEED);
+					jagRightU->Set(-STRAIGHT_SPEED);
+					jagRightD->Set(-STRAIGHT_SPEED);
+					break;
+				case MOVE_BACK:
+					jagLeftU->Set(-STRAIGHT_SPEED);
+					jagLeftD->Set(-STRAIGHT_SPEED);
 					jagRightU->Set(STRAIGHT_SPEED);
 					jagRightD->Set(STRAIGHT_SPEED);
 					break;
-				case MOVE_BACK:
-					jagLeftU->Set(STRAIGHT_SPEED);
-					jagLeftD->Set(STRAIGHT_SPEED);
-					jagRightU->Set(STRAIGHT_SPEED);
-					jagRightD->Set(STRAIGHT_SPEED);
+				case GO_BACKDRIVE_STRAIGHT:
+					jagLeftU->Set(BACKDRIVE_STRAIGHT_SPEED);
+					jagLeftD->Set(BACKDRIVE_STRAIGHT_SPEED);
+					jagRightU->Set(-BACKDRIVE_STRAIGHT_SPEED);
+					jagRightD->Set(-BACKDRIVE_STRAIGHT_SPEED);
+					break;
+				case MOVE_BACKDRIVE_BACK:
+					jagLeftU->Set(-BACKDRIVE_STRAIGHT_SPEED);
+					jagLeftD->Set(-BACKDRIVE_STRAIGHT_SPEED);
+					jagRightU->Set(BACKDRIVE_STRAIGHT_SPEED);
+					jagRightD->Set(BACKDRIVE_STRAIGHT_SPEED);
 					break;
 				default:
 					jagLeftU->Set(0.0);

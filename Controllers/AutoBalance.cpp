@@ -9,6 +9,8 @@ AutoBalance2415::AutoBalance2415(void) {
 	drive = Task2415::SearchForTask("drive2415");
 	
 	gyro = new Gyro(1,1);
+	
+	backdriveTimer = new Timer();
 
 	stickL = global->GetLeftJoystick();
 	stickR = global->GetRightJoystick();
@@ -20,39 +22,58 @@ AutoBalance2415::AutoBalance2415(void) {
 }
 
 int AutoBalance2415::Main(int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10) {
-	gyro->Reset();
 	printf("entering %s main\n", taskName);
+	
+	gyro->Reset();
+	int direction;
+	
 	while (keepTaskAlive) {
 		if (taskStatus == STATUS_TELEOP || taskStatus == STATUS_AUTO) {
 			printf("%g\n", gyro->GetAngle());
 			float angle = gyro->GetAngle();			
 			switch (taskState) {
 				case WAIT_FOR_INPUT:
-					drive->SetState(NORMAL_JOYSTICK);
-					if( angle > MARGIN_OF_ERROR){
-						taskState = TILTED_TOWARDS_FRONT;
-					}
-					if (angle < -MARGIN_OF_ERROR){
-						taskState = TILTED_TOWARDS_BACK;					
+					drive->SetState(NORMAL_JOYSTICK); //Should make the panic button toggle
+					if (!(stickFB->GetRawButton(11)) && !CheckIfBalanced(angle)) {
+						taskState = BALANCE_LOOP;
 					}
 					break;
-				case TILTED_TOWARDS_FRONT:
-					drive->SetState(MOVE_BACK);
-					if( CheckIfBalanced(angle) ){
-						taskState = WAIT_FOR_INPUT;
-					}
-					if ( angle < -MARGIN_OF_ERROR) {
-						taskState = TILTED_TOWARDS_BACK;
+				case BALANCE_LOOP:
+					if( CheckIfBalanced(angle)) {
+						taskState = BACKDRIVE;
+					} else {
+						if (angle >= MARGIN_OF_ERROR) {
+							drive->SetState(MOVE_BACK);
+							direction = -1;
+							printf("moving on back\n");
+						} else {
+							if (angle <= -MARGIN_OF_ERROR) {
+								drive->SetState(GO_STRAIGHT);
+								printf("going forward\n");
+								direction = 1;
+							}
+						}
 					}
 					break;
-				case TILTED_TOWARDS_BACK:
-					drive->SetState(GO_STRAIGHT);
-					if( CheckIfBalanced(angle) ){
-						taskState = WAIT_FOR_INPUT;
+				case BACKDRIVE:
+					if (direction == 1) {
+						drive->SetState(MOVE_BACKDRIVE_BACK);
+						backdriveTimer->Start();
+						direction = 0;
 					}
-					if ( angle > MARGIN_OF_ERROR) {
-						taskState = TILTED_TOWARDS_FRONT;
+					if (direction == -1) {
+						drive->SetState(GO_BACKDRIVE_STRAIGHT);
+						backdriveTimer->Start();
+						direction = 0;
 					}
+					if (backdriveTimer->Get() >= BACKDRIVE_PERIOD) {
+						backdriveTimer->Stop();
+						backdriveTimer->Reset();
+						taskState = STOP;
+					}
+					break;
+				case STOP:
+					drive->SetState(STOP_BOT);
 					break;
 				default:
 					taskState = WAIT_FOR_INPUT;

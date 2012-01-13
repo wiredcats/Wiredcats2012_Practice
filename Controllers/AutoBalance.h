@@ -9,10 +9,12 @@
 #include "../Global.h"
 
 #define WAIT_FOR_INPUT (10)
-#define TILTED_TOWARDS_FRONT (20)
-#define TILTED_TOWARDS_BACK (30)
+#define BALANCE_LOOP (20)
+#define BACKDRIVE (30)
+#define STOP (40)
 
-const float MARGIN_OF_ERROR = 10.0;
+const float MARGIN_OF_ERROR = 8.0;
+const float BACKDRIVE_PERIOD = 0.45;
 
 class AutoBalance2415 : public Task2415 {
 private:
@@ -21,6 +23,8 @@ private:
 	Task2415 *drive;
 	
 	Gyro *gyro;
+	
+	Timer *backdriveTimer;
 	
 	Joystick *stickFB, *stickL, *stickR;
 

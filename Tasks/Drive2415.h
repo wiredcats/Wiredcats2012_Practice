@@ -9,8 +9,11 @@
 #define GO_STRAIGHT (20)
 #define MOVE_BACK (30)
 #define STOP_BOT (40)
+#define GO_BACKDRIVE_STRAIGHT (50)
+#define MOVE_BACKDRIVE_BACK (60)
 
-const float STRAIGHT_SPEED = 0.35;
+const float STRAIGHT_SPEED = 0.27;
+const float BACKDRIVE_STRAIGHT_SPEED = 0.3;
 
 class Drive2415 : public Task2415 {
 private:
