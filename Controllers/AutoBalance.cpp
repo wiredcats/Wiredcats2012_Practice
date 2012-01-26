@@ -11,6 +11,7 @@ AutoBalance2415::AutoBalance2415(void) {
 	gyro = new Gyro(1,1);
 	
 	backdriveTimer = new Timer();
+	stopTimer = new Timer();
 
 	stickL = global->GetLeftJoystick();
 	stickR = global->GetRightJoystick();
@@ -34,7 +35,7 @@ int AutoBalance2415::Main(int a2, int a3, int a4, int a5, int a6, int a7, int a8
 			switch (taskState) {
 				case WAIT_FOR_INPUT:
 					drive->SetState(NORMAL_JOYSTICK); //Should make the panic button toggle
-					if (!(stickFB->GetRawButton(11)) && !CheckIfBalanced(angle)) {
+					if (stickFB->GetRawButton(11) && !CheckIfBalanced(angle)) {
 						taskState = BALANCE_LOOP;
 					}
 					break;
@@ -70,10 +71,24 @@ int AutoBalance2415::Main(int a2, int a3, int a4, int a5, int a6, int a7, int a8
 						backdriveTimer->Stop();
 						backdriveTimer->Reset();
 						taskState = STOP;
+						stopTimer->Reset();
+						stopTimer->Start();
 					}
 					break;
 				case STOP:
 					drive->SetState(STOP_BOT);
+					if(stopTimer->Get() >= STOP_PERIOD || !(stickFB->GetRawButton(11))) {
+						stopTimer->Stop();
+						stopTimer->Reset();
+						taskState = FINAL_CHECK;
+					}
+					break;
+				case FINAL_CHECK:
+					if( CheckIfBalanced(angle) || !(stickFB->GetRawButton(11))) {
+						taskState = WAIT_FOR_INPUT;						
+					} else {
+						taskState = BALANCE_LOOP;
+					}
 					break;
 				default:
 					taskState = WAIT_FOR_INPUT;

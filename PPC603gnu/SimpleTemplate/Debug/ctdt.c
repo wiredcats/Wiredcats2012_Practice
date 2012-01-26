@@ -7,7 +7,13 @@
 /*       -fdollars-in-identifiers flag.                   */
 
 
+void _GLOBAL__I__Z14sendVisionDatav();
+
+void _GLOBAL__I__ZN10Turret2415C2Ev();
+
 void _GLOBAL__I__ZN15AutoBalance2415C2Ev();
+
+void _GLOBAL__I__ZN15AutoTracker2415C2Ev();
 
 void _GLOBAL__I__ZN16TaskTemplate2415C2Ev();
 
@@ -32,7 +38,10 @@ void _GLOBAL__I_AxisCamera_debugFlag();
 extern void (*_ctors[])();
 void (*_ctors[])() =
     {
+    _GLOBAL__I__Z14sendVisionDatav,
+    _GLOBAL__I__ZN10Turret2415C2Ev,
     _GLOBAL__I__ZN15AutoBalance2415C2Ev,
+    _GLOBAL__I__ZN15AutoTracker2415C2Ev,
     _GLOBAL__I__ZN16TaskTemplate2415C2Ev,
     _GLOBAL__I__ZN6Global6myselfE,
     _GLOBAL__I__ZN8Task24158TaskListE,
@@ -46,7 +55,13 @@ void (*_ctors[])() =
     0
     };
 
+void _GLOBAL__D__Z14sendVisionDatav();
+
+void _GLOBAL__D__ZN10Turret2415C2Ev();
+
 void _GLOBAL__D__ZN15AutoBalance2415C2Ev();
+
+void _GLOBAL__D__ZN15AutoTracker2415C2Ev();
 
 void _GLOBAL__D__ZN16TaskTemplate2415C2Ev();
 
@@ -69,7 +84,10 @@ void _GLOBAL__D_AxisCamera_debugFlag();
 extern void (*_dtors[])();
 void (*_dtors[])() =
     {
+    _GLOBAL__D__Z14sendVisionDatav,
+    _GLOBAL__D__ZN10Turret2415C2Ev,
     _GLOBAL__D__ZN15AutoBalance2415C2Ev,
+    _GLOBAL__D__ZN15AutoTracker2415C2Ev,
     _GLOBAL__D__ZN16TaskTemplate2415C2Ev,
     _GLOBAL__D__ZN6Global6myselfE,
     _GLOBAL__D__ZN8Task24158TaskListE,

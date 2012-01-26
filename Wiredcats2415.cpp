@@ -22,7 +22,7 @@ void Wiredcats2415::Autonomous(void) {
 
 void Wiredcats2415::OperatorControl(void) {
 	Task2415::SetTaskStatuses(STATUS_TELEOP);
-	comp->Start();
+	comp->Start();	
 }
 
 START_ROBOT_CLASS(Wiredcats2415);

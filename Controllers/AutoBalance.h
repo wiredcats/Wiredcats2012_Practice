@@ -1,5 +1,5 @@
 #ifndef AUTOBALANCE_H_
-#define AUDTOBALANCE_H_
+#define AUTOBALANCE_H_
 
 #include "WPILib.h"
 
@@ -12,9 +12,11 @@
 #define BALANCE_LOOP (20)
 #define BACKDRIVE (30)
 #define STOP (40)
+#define FINAL_CHECK (50)
 
 const float MARGIN_OF_ERROR = 8.0;
 const float BACKDRIVE_PERIOD = 0.45;
+const float STOP_PERIOD = 1.0;
 
 class AutoBalance2415 : public Task2415 {
 private:
@@ -24,7 +26,7 @@ private:
 	
 	Gyro *gyro;
 	
-	Timer *backdriveTimer;
+	Timer *backdriveTimer, *stopTimer;
 	
 	Joystick *stickFB, *stickL, *stickR;
 

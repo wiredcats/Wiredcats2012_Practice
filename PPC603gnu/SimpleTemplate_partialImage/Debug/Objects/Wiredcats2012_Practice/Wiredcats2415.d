@@ -282,11 +282,16 @@
   C:/windriver/vxworks-6.3/target/h/WPILib/WPILib.h \
   C:/windriver/workspace/Wiredcats2012_Practice/Tasks/../Task2415.h \
   C:/windriver/workspace/Wiredcats2012_Practice/Tasks/../Global.h \
+  C:/windriver/workspace/Wiredcats2012_Practice/Tasks/Turret2415.h \
   C:/windriver/workspace/Wiredcats2012_Practice/Controllers/AutoBalance.h \
   C:/windriver/vxworks-6.3/target/h/WPILib/WPILib.h \
   C:/windriver/workspace/Wiredcats2012_Practice/Controllers/../Tasks/Drive2415.h \
   C:/windriver/workspace/Wiredcats2012_Practice/Controllers/../Task2415.h \
-  C:/windriver/workspace/Wiredcats2012_Practice/Controllers/../Global.h
+  C:/windriver/workspace/Wiredcats2012_Practice/Controllers/../Global.h \
+  C:/windriver/workspace/Wiredcats2012_Practice/Controllers/AutoTracker.h \
+  C:/windriver/workspace/Wiredcats2012_Practice/Controllers/../DashboardDataFormat.h \
+  C:/windriver/vxworks-6.3/target/h/WPILib/WPILib.h \
+  C:/windriver/workspace/Wiredcats2012_Practice/Controllers/../Tasks/Turret2415.h
 
 C:/windriver/workspace/Wiredcats2012_Practice/Wiredcats2415.h:
 
@@ -850,6 +855,8 @@ C:/windriver/workspace/Wiredcats2012_Practice/Tasks/../Task2415.h:
 
 C:/windriver/workspace/Wiredcats2012_Practice/Tasks/../Global.h:
 
+C:/windriver/workspace/Wiredcats2012_Practice/Tasks/Turret2415.h:
+
 C:/windriver/workspace/Wiredcats2012_Practice/Controllers/AutoBalance.h:
 
 C:/windriver/vxworks-6.3/target/h/WPILib/WPILib.h:
@@ -859,3 +866,11 @@ C:/windriver/workspace/Wiredcats2012_Practice/Controllers/../Tasks/Drive2415.h:
 C:/windriver/workspace/Wiredcats2012_Practice/Controllers/../Task2415.h:
 
 C:/windriver/workspace/Wiredcats2012_Practice/Controllers/../Global.h:
+
+C:/windriver/workspace/Wiredcats2012_Practice/Controllers/AutoTracker.h:
+
+C:/windriver/workspace/Wiredcats2012_Practice/Controllers/../DashboardDataFormat.h:
+
+C:/windriver/vxworks-6.3/target/h/WPILib/WPILib.h:
+
+C:/windriver/workspace/Wiredcats2012_Practice/Controllers/../Tasks/Turret2415.h:
