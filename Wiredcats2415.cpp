@@ -11,18 +11,15 @@ Global global;
 #include "Tasks.h"
 
 Wiredcats2415::Wiredcats2415(void) {
-	comp = new Compressor(4, 5);
-	lightsA = new Relay(6);
+	
 }
 
 void Wiredcats2415::Autonomous(void) {
 	Task2415::SetTaskStatuses(STATUS_AUTO);	
-	comp->Start();
 }
 
 void Wiredcats2415::OperatorControl(void) {
 	Task2415::SetTaskStatuses(STATUS_TELEOP);
-	comp->Start();	
 }
 
 START_ROBOT_CLASS(Wiredcats2415);

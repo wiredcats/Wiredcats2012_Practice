@@ -19,7 +19,7 @@ class Drive2415 : public Task2415 {
 private:
 	Global *global;
 
-	CANJaguar *jagLeftU, *jagLeftD, *jagRightU, *jagRightD;
+	Jaguar *jagLeft, *jagRight;
 
 	Joystick *stickL, *stickR;
 

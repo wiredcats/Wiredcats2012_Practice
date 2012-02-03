@@ -3,10 +3,8 @@
 Drive2415::Drive2415(void) {
 	global = Global::GetInstance();
 
-	jagLeftU = new CANJaguar(3);
-	jagLeftD = new CANJaguar(9);
-	jagRightU = new CANJaguar(7);
-	jagRightD = new CANJaguar(8);
+	jagLeft = new Jaguar(1);
+	jagRight = new Jaguar(2);
 
 	stickL = global->GetLeftJoystick();
 	stickR = global->GetRightJoystick();
@@ -22,40 +20,28 @@ int Drive2415::Main(int a2, int a3, int a4, int a5, int a6, int a7, int a8, int 
 		if (taskStatus == STATUS_AUTO || taskStatus == STATUS_TELEOP) {
 			switch (taskState) {
 				case NORMAL_JOYSTICK:
-					jagLeftU->Set(-stickL->GetY());
-					jagLeftD->Set(-stickL->GetY());
-					jagRightU->Set(stickR->GetY());
-					jagRightD->Set(stickR->GetY());
+					jagLeft->Set(stickL->GetY());
+					jagRight->Set(stickR->GetY());
 					break;
 				case GO_STRAIGHT:
-					jagLeftU->Set(STRAIGHT_SPEED);
-					jagLeftD->Set(STRAIGHT_SPEED);
-					jagRightU->Set(-STRAIGHT_SPEED);
-					jagRightD->Set(-STRAIGHT_SPEED);
+					jagLeft->Set(STRAIGHT_SPEED);
+					jagRight->Set(STRAIGHT_SPEED);
 					break;
 				case MOVE_BACK:
-					jagLeftU->Set(-STRAIGHT_SPEED);
-					jagLeftD->Set(-STRAIGHT_SPEED);
-					jagRightU->Set(STRAIGHT_SPEED);
-					jagRightD->Set(STRAIGHT_SPEED);
+					jagLeft->Set(STRAIGHT_SPEED);
+					jagRight->Set(STRAIGHT_SPEED);
 					break;
 				case GO_BACKDRIVE_STRAIGHT:
-					jagLeftU->Set(BACKDRIVE_STRAIGHT_SPEED);
-					jagLeftD->Set(BACKDRIVE_STRAIGHT_SPEED);
-					jagRightU->Set(-BACKDRIVE_STRAIGHT_SPEED);
-					jagRightD->Set(-BACKDRIVE_STRAIGHT_SPEED);
+					jagLeft->Set(BACKDRIVE_STRAIGHT_SPEED);
+					jagRight->Set(BACKDRIVE_STRAIGHT_SPEED);
 					break;
 				case MOVE_BACKDRIVE_BACK:
-					jagLeftU->Set(-BACKDRIVE_STRAIGHT_SPEED);
-					jagLeftD->Set(-BACKDRIVE_STRAIGHT_SPEED);
-					jagRightU->Set(BACKDRIVE_STRAIGHT_SPEED);
-					jagRightD->Set(BACKDRIVE_STRAIGHT_SPEED);
+					jagLeft->Set(BACKDRIVE_STRAIGHT_SPEED);
+					jagRight->Set(BACKDRIVE_STRAIGHT_SPEED);
 					break;
 				default:
-					jagLeftU->Set(0.0);
-					jagRightU->Set(0.0);
-					jagLeftD->Set(0.0);
-					jagRightD->Set(0.0);
+					jagLeft->Set(0.0);
+					jagRight->Set(0.0);
 					break;
 			}
 		}

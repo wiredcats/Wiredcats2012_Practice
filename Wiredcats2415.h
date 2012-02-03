@@ -7,8 +7,6 @@
 
 class Wiredcats2415 : public SimpleRobot {
 private:
-	Compressor *comp;
-	Relay *lightsA;
 
 public:
 	Wiredcats2415(void);
