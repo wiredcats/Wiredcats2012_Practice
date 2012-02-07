@@ -6,15 +6,15 @@
 #include "../Global.h"
 
 #define WAIT_FOR_INPUT (10)
+#define MOVE_LEFT (20)
+#define MOVE_RIGHT (30)
 
 class Turret2415 : public Task2415 {
 private:
 	Global *global;
 	
-	CANJaguar *jagTurret;
-	
-	Joystick *stickR;
-		
+	Jaguar *jagTurret;
+
 public:
 	Turret2415(void);
 	

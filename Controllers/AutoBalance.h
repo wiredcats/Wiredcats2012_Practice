@@ -14,7 +14,7 @@
 #define STOP (40)
 #define FINAL_CHECK (50)
 
-const float MARGIN_OF_ERROR = 8.0;
+const float BALANCE_MARGIN_OF_ERROR = 8.0;
 const float BACKDRIVE_PERIOD = 0.45;
 const float STOP_PERIOD = 1.0;
 

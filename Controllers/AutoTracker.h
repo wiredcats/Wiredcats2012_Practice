@@ -1,26 +1,32 @@
-#ifndef AUTOTRACKER2415_H_
-#define AUTOTRACKER2415_H_
+#ifndef AUTOTRACKER_H_
+#define AUTOTRACKER_H_
 
 #include "WPILib.h"
-#include "../DashboardDataFormat.h"
 
 #include "../Tasks/Turret2415.h"
 
 #include "../Task2415.h"
 #include "../Global.h"
 
+#define WAIT_FOR_INPUT (10)
+
+const float TURRET_MARGIN_OF_ERROR = 5.0;
+
 class AutoTracker2415 : public Task2415 {
 private:
-	Global *global;
-	
+	Global *global;	
+
 	Task2415 *turret;
 	
-	Joystick *stickFB, *stickL, *stickR;
+	Joystick *stickL;
 
 public:
 	AutoTracker2415(void);
 	
 	virtual int Main(int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+	ParticleAnalysisReport FindBest(vector<ParticleAnalysisReport>* vec);
+	float Ratio(vector<ParticleAnalysisReport>* vec, int a);
 };
 
 #endif
+

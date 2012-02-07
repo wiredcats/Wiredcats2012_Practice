@@ -3,8 +3,8 @@
 Drive2415::Drive2415(void) {
 	global = Global::GetInstance();
 
-	jagLeft = new Jaguar(1);
-	jagRight = new Jaguar(2);
+	jagLeft = new Jaguar(2);
+	jagRight = new Jaguar(1);
 
 	stickL = global->GetLeftJoystick();
 	stickR = global->GetRightJoystick();

@@ -30,7 +30,6 @@ int AutoBalance2415::Main(int a2, int a3, int a4, int a5, int a6, int a7, int a8
 	
 	while (keepTaskAlive) {
 		if (taskStatus == STATUS_TELEOP || taskStatus == STATUS_AUTO) {
-			printf("%g\n", gyro->GetAngle());
 			float angle = gyro->GetAngle();			
 			switch (taskState) {
 				case WAIT_FOR_INPUT:
@@ -43,12 +42,12 @@ int AutoBalance2415::Main(int a2, int a3, int a4, int a5, int a6, int a7, int a8
 					if( CheckIfBalanced(angle)) {
 						taskState = BACKDRIVE;
 					} else {
-						if (angle >= MARGIN_OF_ERROR) {
+						if (angle >= BALANCE_MARGIN_OF_ERROR) {
 							drive->SetState(MOVE_BACK);
 							direction = -1;
 							printf("moving on back\n");
 						} else {
-							if (angle <= -MARGIN_OF_ERROR) {
+							if (angle <= -BALANCE_MARGIN_OF_ERROR) {
 								drive->SetState(GO_STRAIGHT);
 								printf("going forward\n");
 								direction = 1;
@@ -101,5 +100,5 @@ int AutoBalance2415::Main(int a2, int a3, int a4, int a5, int a6, int a7, int a8
 }
 
 bool AutoBalance2415::CheckIfBalanced(float angle) {
-	return ( -MARGIN_OF_ERROR <= angle && angle <= MARGIN_OF_ERROR);
+	return ( -BALANCE_MARGIN_OF_ERROR <= angle && angle <= BALANCE_MARGIN_OF_ERROR);
 }
